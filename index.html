@@ -886,7 +886,35 @@
     #news-apply .news-swiper .swiper-pagination {
     bottom: 6px !important;
     }
+    .video-wrap{
+      width: 100%;
+      max-width: 100%;
+      border-radius: 14px;
+      overflow: hidden;          /* clips video corners/overflow */
+      background: #000;
+    }
+
+    .video-wrap video{
+      display: block;
+      width: 100%;               /* responsive */
+      max-width: 100%;
+      height: auto;              /* keep aspect ratio */
+      object-fit: cover;
+    }
+
+    /* If parent is grid/flex item, prevent overflow */
+    .video-col, .legacy-grid > div {
+      min-width: 0;
+    }
+
+    /* Mobile safety */
+    @media (max-width: 768px){
+      .video-wrap{
+        border-radius: 10px;
+      }
+    }
     </style>
+    
 </head>
 <body>
 
@@ -1339,7 +1367,7 @@
 <section id="alumni" class="section-pad">
   <div class="container">
     <div class="alumni-header">
-      <h2 class="section-title reveal">Alumni Success Stories</h2>
+      <h2 class="section-title reveal" style="width: 100%;">Alumni Success Stories</h2>
       <div class="gold-line center reveal delay-1"></div>
       <p class="reveal delay-2">Real people, real placements, real impact.</p>
     </div>
@@ -1558,8 +1586,8 @@
       <!-- Video + Stats -->
       <div>
         <div class="video-wrap reveal delay-2">
-            <video src="myVideo.mp4" autoplay muted controls playsinline title="Campus Tour" width="600rem"></video>
-        </div>
+          <video src="myVideo.mp4" muted controls playsinline></video>
+      </div>
         <div class="stats-row" style="margin-top:36px;">
           <div class="stat-bar-item reveal delay-1">
             <div class="stat-bar-label"><span>Placements 2022</span><span>78%</span></div>
