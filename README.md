@@ -1,23 +1,20 @@
 # AGC-Landing-Page-By-Krishna
-# AGC Landing Page By Krishna
+
+## AGC Landing Page By Krishna
 
 A modern, responsive college landing page built using **HTML, CSS, and JavaScript**.  
 This project is designed as a polished admission-focused website for **Amritsar Group of Colleges (AGC)** style branding, with sections like hero, programmes, placements, news/events, quick apply, and contact.
 
 ---
 
-## 🚀 Features
+## 📌 Project Overview
 
-- Responsive navigation bar
-- Hero/banner section
-- About & highlights sections
-- Programmes / courses showcase
-- Placements & recruiters section
-- Latest News & Events slider (Swiper)
-- Quick Apply form
-- Embedded campus video
-- Smooth UI styling with modern layout
-- Mobile-friendly responsive design
+This is a front-end landing page project focused on:
+
+- Clean and modern UI
+- Fully responsive layout
+- College/admission-themed content structure
+- Promotional media integration (video support)
 
 ---
 
@@ -25,63 +22,55 @@ This project is designed as a polished admission-focused website for **Amritsar 
 
 - **HTML5**
 - **CSS3**
-- **JavaScript (Vanilla JS)**
-- **Swiper.js** (for slider/carousel)
-- **Font Awesome** (for icons)
+- **JavaScript**
 
 ---
 
-## 📁 Project Structure
+## 📂 Current Repository Structure
 
 ```bash
 AGC-Landing-Page-By-Krishna/
-│
+├── README.md
 ├── index.html
-├── style.css
-├── script.js
-├── myVideo.mp4
-└── assets/ (images/icons if used)
+└── myVideo.mp4
 ```
 
 ---
 
-## ⚙️ How to Run Locally
+## 🚀 How to Run Locally
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/KrishnaPassi1818/AGC-Landing-Page-By-Krishna.git
    ```
 
-2. Open the project folder:
+2. Go to the project folder:
    ```bash
    cd AGC-Landing-Page-By-Krishna
    ```
 
-3. Run with Live Server (recommended) or open `index.html` directly in your browser.
+3. Open `index.html` in your browser.
 
 ---
 
-## 🔧 Notes
+## 🎯 Key Sections Included
 
-- For local video playback, use `<video>` tag instead of `<iframe>` for `.mp4` files.
-- Swiper slider requires:
-  - Swiper CSS in `<head>`
-  - Swiper JS before `</body>`
-  - Proper JS initialization in `script.js` or inline script
-
----
-
-## 📌 Future Improvements
-
-- Backend integration for Quick Apply form submissions
-- Form validation with error states
-- SEO meta optimization
-- Accessibility improvements (ARIA labels, keyboard nav)
-- Performance optimization (image/video compression)
+- Hero Banner
+- Programmes/Courses
+- Placements
+- News & Events
+- Quick Apply
+- Contact
 
 ---
 
-## 👨‍💻 Author
+## 📽️ Media
+
+- `myVideo.mp4` is included in the repository and used for visual enhancement/presentation in the landing page.
+
+---
+
+## 👤 Author
 
 **Krishna Passi**  
 GitHub: [@KrishnaPassi1818](https://github.com/KrishnaPassi1818)
@@ -90,4 +79,9 @@ GitHub: [@KrishnaPassi1818](https://github.com/KrishnaPassi1818)
 
 ## 📄 License
 
-This project is open-source and available under the **MIT License**.
+This project is open-source.  
+You can add an MIT License file if you want to make usage terms explicit.
+
+---
+
+If you find this project useful, consider giving it a ⭐ on GitHub.
