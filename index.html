@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amritsar Group of Colleges — Premier Education Since 2002</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -768,6 +770,123 @@
     #back-top.show { opacity:1; pointer-events:all; transform:none; }
     #back-top:hover { background:var(--gold); color:var(--blue); }
   </style>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+        // prevent JS error if your function is not defined elsewhere
+        function handleFormSubmit(btn) {
+            alert("Thanks! Our admissions counsellor will contact you soon.");
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper(".news-swiper", {
+            loop: true,
+            spaceBetween: 20,
+            slidesPerView: 1,
+            autoplay: { delay: 3500, disableOnInteraction: false },
+            pagination: {
+                el: ".news-swiper .swiper-pagination",
+                clickable: true
+            }
+            });
+        });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        new Swiper(".news-swiper", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        autoplay: { delay: 3500, disableOnInteraction: false },
+        pagination: {
+            el: ".news-swiper .swiper-pagination",
+            clickable: true
+        },
+        navigation: false   // important
+        });
+    });
+    </script>
+    <style>
+    #news-apply{
+        display:grid;
+        grid-template-columns:1.2fr 1fr;
+        gap:28px;
+        align-items:start;
+    }
+    .news-col,.apply-col{min-width:0;}
+    .news-swiper{width:100%;padding-bottom:40px;}
+    .swiper-slide{height:auto;}
+    .news-slide{
+        background:#fff;
+        border-radius:14px;
+        overflow:hidden;
+        box-shadow:0 8px 24px rgba(0,0,0,.08);
+    }
+    .news-slide-img{height:210px;}
+    .news-slide-body{padding:16px;}
+    .quick-form{
+        background:#fff;
+        border-radius:14px;
+        padding:18px;
+        box-shadow:0 8px 24px rgba(0,0,0,.08);
+    }
+    .form-group{margin-bottom:14px;}
+    .form-group label{display:block;margin-bottom:6px;font-weight:600;}
+    .form-group input,.form-group select{
+        width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;
+    }
+
+    @media (max-width: 992px){
+        #news-apply{grid-template-columns:1fr;}
+    }
+    /* Fix unwanted left blue block in News slider section */
+    #news-apply .news-col::before,
+    #news-apply .news-col::after,
+    #news-apply .news-swiper::before,
+    #news-apply .news-swiper::after {
+    content: none !important;
+    display: none !important;
+    }
+
+    /* Ensure slider area clips any stray absolute element */
+    #news-apply .news-col,
+    #news-apply .news-swiper {
+    position: relative;
+    overflow: hidden;
+    }
+    /* NEWS section hard reset */
+    #news-apply .news-swiper {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 42px;
+    }
+
+    /* Kill old decorative pseudo-elements if any */
+    #news-apply .news-col::before,
+    #news-apply .news-col::after,
+    #news-apply .news-swiper::before,
+    #news-apply .news-swiper::after {
+    content: none !important;
+    display: none !important;
+    }
+
+    /* Hide side nav arrows completely (your issue) */
+    #news-apply .news-swiper .swiper-button-prev,
+    #news-apply .news-swiper .swiper-button-next {
+    display: none !important;
+    }
+
+    /* Also neutralize generic swiper arrow pseudo-icons */
+    #news-apply .news-swiper .swiper-button-prev::after,
+    #news-apply .news-swiper .swiper-button-next::after {
+    display: none !important;
+    content: "" !important;
+    }
+
+    /* Keep pagination visible and centered */
+    #news-apply .news-swiper .swiper-pagination {
+    bottom: 6px !important;
+    }
+    </style>
 </head>
 <body>
 
@@ -1012,17 +1131,19 @@
 ============================================================ -->
 <section class="section-pad">
   <div class="container">
-    <div id="news-apply">
+    <div id="news-apply" style="width: 110%;">
       <!-- News Column -->
       <div class="news-col">
         <h2 class="section-title reveal">Latest News &amp; Events</h2>
         <div class="gold-line reveal delay-1"></div>
-        <div class="swiper news-swiper reveal delay-2" style="padding-bottom:40px;">
+
+        <div class="swiper news-swiper reveal delay-2">
           <div class="swiper-wrapper">
+
             <div class="swiper-slide">
               <div class="news-slide">
                 <div class="news-slide-img">
-                  <div style="width:96vw;height:100%;background:linear-gradient(135deg,#001F5B,#0a4a7a);display:flex;align-items:center;justify-content:center;">
+                  <div style="width:100%;height:100%;background:linear-gradient(135deg,#001F5B,#0a4a7a);display:flex;align-items:center;justify-content:center;">
                     <i class="fa-solid fa-trophy" style="font-size:3rem;color:var(--gold);"></i>
                   </div>
                 </div>
@@ -1034,10 +1155,11 @@
                 </div>
               </div>
             </div>
+
             <div class="swiper-slide">
               <div class="news-slide">
                 <div class="news-slide-img">
-                  <div style="width:100vw;height:100%;background:linear-gradient(135deg,#3a1a0a,#7a4010);display:flex;align-items:center;justify-content:center;">
+                  <div style="width:100%;height:100%;background:linear-gradient(135deg,#3a1a0a,#7a4010);display:flex;align-items:center;justify-content:center;">
                     <i class="fa-solid fa-handshake" style="font-size:3rem;color:var(--gold);"></i>
                   </div>
                 </div>
@@ -1049,10 +1171,11 @@
                 </div>
               </div>
             </div>
+
             <div class="swiper-slide">
               <div class="news-slide">
                 <div class="news-slide-img">
-                  <div style="width:100vw;height:100%;background:linear-gradient(135deg,#0a3a1a,#107a40);display:flex;align-items:center;justify-content:center;">
+                  <div style="width:100%;height:100%;background:linear-gradient(135deg,#0a3a1a,#107a40);display:flex;align-items:center;justify-content:center;">
                     <i class="fa-solid fa-graduation-cap" style="font-size:3rem;color:var(--gold);"></i>
                   </div>
                 </div>
@@ -1064,10 +1187,11 @@
                 </div>
               </div>
             </div>
+
             <div class="swiper-slide">
               <div class="news-slide">
                 <div class="news-slide-img">
-                  <div style="width:100vw;height:100%;background:linear-gradient(135deg,#1a0a3a,#4a107a);display:flex;align-items:center;justify-content:center;">
+                  <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a0a3a,#4a107a);display:flex;align-items:center;justify-content:center;">
                     <i class="fa-solid fa-flask" style="font-size:3rem;color:var(--gold);"></i>
                   </div>
                 </div>
@@ -1079,6 +1203,7 @@
                 </div>
               </div>
             </div>
+
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -1091,6 +1216,7 @@
         <p class="reveal delay-2" style="color:var(--text-mid);font-size:.88rem;margin-bottom:24px;line-height:1.7;">
           Take the first step towards your future. Fill in your details and our admissions counsellor will reach out within 24 hours.
         </p>
+
         <div class="quick-form reveal delay-3">
           <div class="form-group">
             <label>Full Name</label>
@@ -1130,6 +1256,7 @@
               </optgroup>
             </select>
           </div>
+
           <button class="btn-red" style="width:100%;justify-content:center;" onclick="handleFormSubmit(this)">
             <i class="fa-solid fa-phone-volume"></i> Request Callback
           </button>
@@ -1431,7 +1558,7 @@
       <!-- Video + Stats -->
       <div>
         <div class="video-wrap reveal delay-2">
-          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1" allowfullscreen title="Campus Tour"></iframe>
+            <video src="myVideo.mp4" autoplay muted controls playsinline title="Campus Tour" width="600rem"></video>
         </div>
         <div class="stats-row" style="margin-top:36px;">
           <div class="stat-bar-item reveal delay-1">
